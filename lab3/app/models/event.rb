@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-  belongs_to :ev_venue
-  has_many :tickets
+	has_many :venues, dependent: :destroy
+	belongs_to :ticket
 end

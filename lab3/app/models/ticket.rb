@@ -1,6 +1,7 @@
 class Ticket < ApplicationRecord
-	belongs_to :event
+	has_many :events, dependent: :destroy
 	belongs_to :order
-	belongs_to :usuario
-
+	def most_ecpensive_ticket_bought
+		return self.orders.tickets.find(:price).order(price: :desc:).limit(1)
+	end
 end

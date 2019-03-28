@@ -3,11 +3,9 @@
 one:
   name: MyString
   description: MyString
-  f_inicio: MyString
-  ev_venue: one
+  start_date: MyString
 
 two:
   name: MyString
   description: MyString
-  f_inicio: MyString
-  ev_venue: two
+  start_date: MyString
