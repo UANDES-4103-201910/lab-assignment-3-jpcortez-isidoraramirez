@@ -9,7 +9,7 @@ class Ticket < ApplicationRecord
 		return self.tickets.events.find(:start_date).where(:start_date < date_f and :start_date > date_i)
 	end
 	def last_event
-		self.orders.tickets.category.order(start_date event: :desc).limit(1)
+		return self.event.select("events.name").order("ticket_orders.date desc").first
 	end
 
 end
